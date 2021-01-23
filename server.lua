@@ -43,7 +43,7 @@ function getRandomPositionInRange(corner, offset) -- Vector2(positionX, position
 	return corner + offset
 end
 
-function spawnPlayerAtSpawnpoint(thePlayer, spawnElement, rot, skin, dimension, theTeam)
+function playerAtSpawnpoint(thePlayer, spawnElement, rot, skin, dimension, theTeam)
 	assert(isElement(spawnElement), 'spawnPlayerAtSpawnpoint: Invalid variable specified as spawnElement.')
 	assert(isElement(thePlayer), 'spawnPlayerAtSpawnpoint: Invalid variable specified as player.')
 
@@ -71,8 +71,6 @@ function spawnPlayerAtSpawnpoint(thePlayer, spawnElement, rot, skin, dimension, 
 	setCameraTarget(thePlayer, thePlayer)
 	fadeCamera(thePlayer, false)
 	fadeCamera(thePlayer, true)
-
-	print('a')
 
 	return thePlayer
 end
